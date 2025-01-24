@@ -1,5 +1,6 @@
-document.getElementById('upload').addEventListener('click', () => {
-    const files = document.getElementById('file').files;
+
+document.getElementById('upload').addEventListener('change', () => {
+    const files = document.getElementById('upload').files;
     if (files.length === 0) {
         console.log('No files selected');
         return;
@@ -25,3 +26,4 @@ document.getElementById('upload').addEventListener('click', () => {
         reader.readAsDataURL(file);
     });
 });
+  
